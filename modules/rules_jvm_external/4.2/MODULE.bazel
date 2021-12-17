@@ -1,0 +1,5 @@
+module(
+    name = "rules_jvm_external",
+    version = "4.2",
+    compatibility_level = 1,
+)

@@ -1,0 +1,16 @@
+platforms:
+  centos7:
+    build_targets:
+    - '@rules_license//rules/...'
+  debian10:
+    build_targets:
+    - '@rules_license//rules/...'
+  macos:
+    build_targets:
+    - '@rules_license//rules/...'
+  ubuntu2004:
+    build_targets:
+    - '@rules_license//rules/...'
+  windows:
+    build_targets:
+    - '@rules_license//rules/...'

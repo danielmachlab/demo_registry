@@ -1,0 +1,36 @@
+--- /dev/null
++++ BUILD
+@@ -0,0 +1,14 @@
++licenses(["notice"])  #  BSD/MIT-like license
++load("@rules_license//rules:license_kind.bzl", "license_kind")
++load("@rules_license//rules:license.bzl", "license")
++
++package(default_applicable_licenses = [":license"])
++
++license(
++    license_text = "LICENSE",
++    name = "license",
++    package_name = "Hello World",
++    license_kinds = [
++        "//compliance/licenses:MIT",
++    ],
++)
++
++license_kind(
++    name = "MIT",
++    conditions = ['notice'],
++    url = "https://spdx.org/licenses/MIT.html",
++)
++
++cc_library(
++    name = "zlib",
++    srcs = glob(["*.c"]),
++    hdrs = glob(["*.h"]),
++    # Use -Dverbose=-1 to turn off zlib's trace logging. (#3280)
++    copts = [
++        "-w",
++        "-Dverbose=-1",
++    ],
++    includes = ["."],
++    visibility = ["//visibility:public"],
++)

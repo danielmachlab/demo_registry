@@ -12,7 +12,7 @@
 +    name = "license",
 +    package_name = "Hello World",
 +    license_kinds = [
-+        "//compliance/licenses:MIT",
++        ":MIT",
 +    ],
 +)
 +
